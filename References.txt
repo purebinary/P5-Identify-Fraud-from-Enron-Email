@@ -4,6 +4,8 @@ http://scikit-learn.org/stable/modules/pipeline.html
 
 https://docs.python.org/2/library/functions.html
 
+https://pandas-docs.github.io/pandas-docs-travis/dsintro.html
+
 http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html#sklearn.preprocessing.MinMaxScaler
 
 http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html#sklearn.feature_selection.SelectKBest
