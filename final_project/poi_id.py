@@ -81,7 +81,7 @@ def grid_search(my_dataset, features_list, param_grid, clf, folds=100, do_imp=Fa
     else:
         pipeline = Pipeline([("scaler", scaler), ("f_select", selector), ("clf", clf)])
 
-    grid_search = GridSearchCV(pipeline, param_grid)
+    grid_search = GridSearchCV(pipeline, param_grid, scoring='f1')
 
     test_classifier(grid_search, my_dataset, features_list, folds=folds)
     print "\n", grid_search.best_estimator_
@@ -202,14 +202,14 @@ all_features = ['poi'] + all_features
 
 ### Task 4-3-1: DecisionTree Classifier:
 
-# clf = tree.DecisionTreeClassifier()
-# param_grid = dict(f_select__k=[3, 6, 9, 12])
+#clf = tree.DecisionTreeClassifier()
+#param_grid = dict(f_select__k=[3, 6, 9, 12])
 
-# print "\nTrain Decision Tree Classifier... "
+#print "\nTrain Decision Tree Classifier... "
 # print "\nWith Imputation..."
 # basic_grid_search(my_dataset, all_features, param_grid, clf, do_imp=True)
 # print "\nWithout Imputation..."
-# basic_grid_search(my_dataset, all_features, param_grid, clf)
+#grid_search(my_dataset, all_features, param_grid, clf)
 
 ## Imputation:
     # Accuracy: 0.80667
@@ -227,14 +227,14 @@ all_features = ['poi'] + all_features
 
 ### Task 4-3-2: Train Naive Bayes Classifier
 
-# clf = GaussianNB()
-# param_grid = dict(f_select__k=[3, 6, 9, 12])
-#
-# print "\nNaive Bayes Classifier:"
+#clf = GaussianNB()
+#param_grid = dict(f_select__k=[3, 6, 9, 12])
+
+#print "\nNaive Bayes Classifier:"
 # print "\nWith Imputation..."
 # basic_grid_search(my_dataset, all_features, param_grid, clf, do_imp=True)
-# print "\nWithout Imputation..."
-# basic_grid_search(my_dataset, all_features, param_grid, clf)
+#print "\nWithout Imputation..."
+#grid_search(my_dataset, all_features, param_grid, clf)
 
 ## Imputation :
     # Accuracy: 0.84467
@@ -260,7 +260,7 @@ all_features = ['poi'] + all_features
 # print "\nWith Imputation..."
 # basic_grid_search(my_dataset, all_features, param_grid, clf, do_imp=True)
 # print "\nWithout Imputation..."
-# basic_grid_search(my_dataset, all_features, param_grid, clf)
+# grid_search(my_dataset, all_features, param_grid, clf)
 
 ## With imputation:
     # Accuracy: 0.86733
@@ -278,14 +278,14 @@ all_features = ['poi'] + all_features
 
 ### Task 4-3-4: Train AdaBoost Classifier
 
-# clf = AdaBoostClassifier()
-# param_grid = dict(f_select__k=[3, 6, 9, 12])
+#clf = AdaBoostClassifier()
+#param_grid = dict(f_select__k=[3, 6, 9, 12])
 
 # print "\nAdaBoost Classifier:"
 # print "\nWith Imputation..."
 # basic_grid_search(my_dataset, all_features, param_grid, clf, do_imp=True)
-# print "\nWithout Imputation..."
-# basic_grid_search(my_dataset, all_features, param_grid, clf)
+#print "\nWithout Imputation..."
+#grid_search(my_dataset, all_features, param_grid, clf)
 
 ## Imputation:
     # Accuracy: 0.83267
