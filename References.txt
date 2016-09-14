@@ -18,6 +18,8 @@ http://scikit-learn.org/stable/auto_examples/cluster/plot_feature_agglomeration_
 
 http://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.Imputer.html
 
+http://scikit-learn.org/stable/modules/model_evaluation.html#scoring-parameter
+
 https://en.wikipedia.org/wiki/Precision_and_recall
 
 https://en.wikipedia.org/wiki/Cross-validation_(statistics)
